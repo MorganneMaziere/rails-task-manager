@@ -1,0 +1,16 @@
+<div class="container">
+<h1>Tasks</h1>
+
+<ul class="list-group">
+  <% @tasks.each do |task| %>
+    <li class="list-group-item">
+      <div class="form-check">
+        <%= check_box_tag nil, nil, false, class: "form-check-input me-1" %>
+        <%= link_to task.title, task_path(task), class: "form-check-label" %>
+      </div>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Create new task", new_task_path, class: "btn btn-primary" %>
+</div>

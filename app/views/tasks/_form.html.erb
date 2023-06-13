@@ -1,0 +1,18 @@
+<form>
+  <div class="mb-3">
+    <%= label_tag :title, "Title", class: "form-label" %>
+    <%= text_field_tag :title, nil, class: "form-control", value: task.title %>
+  </div>
+
+  <div class="mb-3">
+    <%= label_tag :details, "Details", class: "form-label" %>
+    <%= text_field_tag :details, nil, class: "form-control", value: task.details %>
+  </div>
+
+  <div class="mb-3 form-check">
+    <%= check_box_tag :completed, 1, false, class: "form-check-input" %>
+    <%= label_tag :completed, "Completed", class: "form-check-label", value: task.completed %>
+  </div>
+
+  <%= submit_tag "Submit", class: "btn btn-primary" %>
+</form>
